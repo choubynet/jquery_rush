@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rush 2048</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <table class="infos">
+           <tr>
+               <td class="casesinfos score">Score<br>0</td>
+               <td class="casesinfos highscore">Record<br>0</td>
+               <td class="casesinfos rejouer">REJOUER</td>
+           </tr> 
+        </table>
+    </div>
+    <div id="overlaywin">
+        <div id="text">Bravo, c'est gagné !<br>Vous pouvez continuer à jouer pour augmenter votre score !<br>(cliquez n'importe où pour continuer)</div>        
+    </div>
+    <div id="overlaylose">        
+        <div id="text">Désolé, vous avez perdu !<br>(cliquez n'importe où pour commencer une nouvelle partie)</div>
+    </div>
+    <div class="Games">
+    </div>
+    <div>
+        <p class="recordman"></p>
+    </div>
+    <div>
+        <audio class="aplayer" src="tetris-gameboy-02.mp3" autoplay="autoplay" loop="loop" controls id="player"></audio>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="Base2048.js"></script>
+    <script type="text/javascript">
+        $(function()
+        {
+            $('.Games').game2048();
+        });
+    </script>
+</body>
+</html>
